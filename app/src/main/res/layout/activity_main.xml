@@ -67,6 +67,10 @@
                 />
         </LinearLayout>
         <Button
+            android:id="@+id/currentLocation"
+            style="@style/ButtonStyle"
+        />
+        <Button
             android:id="@+id/button_1"
             style="@style/ButtonStyle"
             />
