@@ -51,5 +51,6 @@ class CurrentForcastActivity : AppCompatActivity() {
     }
     fun goBack(v: View) {
         finish()
+        overridePendingTransition(R.anim.fade_in_and_scale, 0)
     }
 }

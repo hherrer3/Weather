@@ -40,5 +40,6 @@ class WeeklyForecastActivity : AppCompatActivity() {
 
     fun goBack(v: View) {
         finish()
+        overridePendingTransition(R.anim.slide_from_left, 0)
     }
 }
