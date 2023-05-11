@@ -15,8 +15,8 @@ import android.widget.Toast.makeText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
+//import com.google.android.gms.ads.AdRequest
+//import com.google.android.gms.ads.AdView
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,18 +29,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pref : SharedPreferences
     private lateinit var editor : Editor
     private lateinit var builder : AlertDialog.Builder
-    private lateinit var adView : AdView
-    private lateinit var adBuilder : AdRequest.Builder
-    private lateinit var adRequest : AdRequest
+ //   private lateinit var adView : AdView
+//    private lateinit var adBuilder : AdRequest.Builder
+//    private lateinit var adRequest : AdRequest
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // Loading the ad
-        adView = findViewById(R.id.adView)
-        adBuilder = AdRequest.Builder()
-        adRequest = adBuilder.build()
-        adView.loadAd(adRequest)
+     //   adView = findViewById(R.id.adView)
+  //      adBuilder = AdRequest.Builder()
+     //   adRequest = adBuilder.build()
+   //     adView.loadAd(adRequest)
         button_1 = findViewById(R.id.button_1)
         button_2 = findViewById(R.id.button_2)
         button_3 = findViewById(R.id.button_3)

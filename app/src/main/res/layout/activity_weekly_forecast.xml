@@ -40,7 +40,10 @@
                 android:id="@+id/day1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="casual"/>
         </LinearLayout>
         <!--Same design repeated for the next 4 LinearLayouts -->
         <LinearLayout
@@ -54,7 +57,10 @@
                 android:id="@+id/day2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="casual"/>
         </LinearLayout>
         <LinearLayout
             style="@style/WeeklyStyle">
@@ -67,7 +73,10 @@
                 android:id="@+id/day3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="casual"/>
         </LinearLayout>
 
         <LinearLayout
@@ -81,7 +90,10 @@
                 android:id="@+id/day4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="casual"/>
         </LinearLayout>
         <LinearLayout
             style="@style/WeeklyStyle">
@@ -94,7 +106,10 @@
                 android:id="@+id/day5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="casual"/>
         </LinearLayout>
 
         <Button

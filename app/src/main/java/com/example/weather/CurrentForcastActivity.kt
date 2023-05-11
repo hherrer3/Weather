@@ -27,24 +27,31 @@ class CurrentForcastActivity : AppCompatActivity() {
     fun setImage(weather : String) {
         if (weather.contains("Rain")) {
             bitmap = BitmapFactory.decodeResource(resources, R.raw.rain)
-        }else if(weather.contains("Partly")) {
+        } else if (weather.contains("Partly")) {
             bitmap = BitmapFactory.decodeResource(resources, R.raw.partly_cloudy)
-
-        }else if(weather.contains("Sunny")) {
+        } else if (weather.contains("Sunny")) {
             bitmap = BitmapFactory.decodeResource(resources, R.raw.sunny)
-
-        }else if(weather.contains("Clouds")) {
+        } else if (weather.contains("Clouds")) {
             bitmap = BitmapFactory.decodeResource(resources, R.raw.cloudy)
-        }else if(weather.contains("Clear")) {
+        } else if (weather.contains("Clear")) {
             bitmap = BitmapFactory.decodeResource(resources, R.raw.sunny)
+        }else if (weather.contains("Snow")){
+            bitmap = BitmapFactory.decodeResource(resources, R.raw.snow)
+        }else if (weather.contains("Fog")){
+            bitmap = BitmapFactory.decodeResource(resources, R.raw.fog)
+        }else if (weather.contains("Thunderstorm")){
+            bitmap = BitmapFactory.decodeResource(resources, R.raw.thunderstorm)
+        }else if (weather.contains("Windy")){
+            bitmap = BitmapFactory.decodeResource(resources, R.raw.windy)
         }else {
-            bitmap = BitmapFactory.decodeResource(resources,R.raw.sunny)
+            bitmap = BitmapFactory.decodeResource(resources, R.raw.na)
         }
         currWeatherIV.setImageBitmap(bitmap)
     }
     fun setTextView(forecast: Weather.WeatherInformation) {
         var display =  forecast.name + ", " + forecast.country + "\n"
-        display += forecast.mainWeather + "\n Temp: " + forecast.temperatureKelvin + "\n"
+        display += forecast.mainWeather + "\n Temp: " +
+                MainActivity.weather.convertKelvinToFahrenheit(forecast.temperatureKelvin) + " F\n"
         display += "Wind Speed: " + forecast.windSpeed + " mph\n"
         display +=  "Humidity: " + forecast.humidity + "%"
         currWeatherTV.text = display

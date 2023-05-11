@@ -10,6 +10,7 @@ import java.net.URL
 import java.util.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
+import kotlin.math.roundToInt
 
 class Weather {
 
@@ -127,6 +128,7 @@ class Weather {
         }
     }
 
+
     fun getDailyInfo() : WeatherInformation
     {
         return dailyInfo
@@ -162,6 +164,13 @@ class Weather {
         lateinit var name : String
     }
 
+    fun convertKelvinToCelsius(temp : Double) : Int {
+        return (temp - 273.15).roundToInt()
+    }
+
+    fun convertKelvinToFahrenheit(temp: Double): Int {
+        return (( (9.0/5.0) * (temp - 273.15) ) + 32.0).roundToInt()
+    }
     inner class WeatherThread : Thread
     {
         private lateinit var string : String
